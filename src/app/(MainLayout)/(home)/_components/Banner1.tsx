@@ -13,7 +13,7 @@ export const Banner1 = () => {
 
         <Title
           heading="   Why PFC?"
-          subHeading="   Discover why PFC stands out – from our commitment to excellence to
+          subHeading="   our commitment to excellence to
                       our innovative solutions and dedicated community support."
         />
 

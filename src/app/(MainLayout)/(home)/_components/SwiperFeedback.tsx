@@ -15,6 +15,7 @@ import Image from "next/image";
 
 import fd1 from "@/assets/feedback/4.png";
 import Container from "@/components/shared/Container";
+import { Title } from "@/components/shared/Title";
 
 export default function SwiperFeedback() {
   const feedbackData = [
@@ -42,8 +43,12 @@ export default function SwiperFeedback() {
   ];
 
   return (
-    <div className=" py-4  bg-[#ecf1f8]  ">
+    <div className="pt-8   bg-[#ecf1f8cc]  ">
       <Container>
+        <Title
+          heading=" Feedback That Matters"
+          subHeading="Our customers’ experience is our top priority."
+        />
         <Swiper
           breakpoints={{
             640: {
@@ -80,7 +85,7 @@ export default function SwiperFeedback() {
                   <p className="font-bold">{item.name}</p>
                   <div className="relative">
                     {/* Quote Icon */}
-                    <FaQuoteLeft className="text-orange-600 text-3xl absolute top-0 left-0 mt-1" />
+                    <FaQuoteLeft className="text-[#F99436] text-3xl absolute top-0 left-0 mt-1" />
 
                     {/* Feedback Text */}
                     <h1 className="  pt-4 ml-9 leading-relaxed px-2">

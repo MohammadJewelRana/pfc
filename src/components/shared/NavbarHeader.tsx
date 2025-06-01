@@ -13,12 +13,7 @@ const NavbarHeader = () => {
           {/* Logo */}
           <Link href="/">
             <div className="relative h-12 md:h-16 w-24 cursor-pointer">
-              <Image
-                src={logo}
-                fill
-                className="object-contain "
-                alt="logo"
-              />
+              <Image src={logo} fill className="object-contain " alt="logo" />
             </div>
           </Link>
 
@@ -26,8 +21,8 @@ const NavbarHeader = () => {
           <div className="flex items-center space-x-4">
             {/* Phone */}
             <Link href="tel:+8801xxxxxxxxx" passHref title="Call Us">
-              <p className="flex items-center font-medium text-gray-700 text-[14px] md:text-md lg:text-lg hover:text-orange-700">
-                <FaPhoneAlt className="mr-2 text-white text-lg p-1 rounded-full bg-orange-600" />
+              <p className="flex items-center font-medium text-gray-700 text-[14px] md:text-md lg:text-lg hover:text-[#F99436]">
+                <FaPhoneAlt className="mr-2 text-white text-lg p-1 rounded-full bg-[#F99436]" />
                 +880 1xxx-xxxxxx
               </p>
             </Link>
@@ -37,10 +32,10 @@ const NavbarHeader = () => {
               href="/catalog.pdf"
               download="catalog.pdf"
               title="Download Catalog"
-              className="flex items-center font-medium text-gray-700 text-[14px] md:text-md lg:text-lg hover:text-orange-700 transition"
+              className="flex items-center font-medium text-gray-700 text-[14px] md:text-md lg:text-lg hover:text-[#F99436] transition"
             >
               <span className="mr-2">Catalog</span>
-              <FaDownload className="text-orange-600 text-md" />
+              <FaDownload className="text-[#F99436] text-md" />
             </a>
           </div>
         </div>

@@ -15,7 +15,7 @@ const About = () => {
         <div className="">
           <Title
             heading=" About PFC"
-            subHeading="   Discover why PFC stands out – from our commitment to excellence to
+            subHeading="   our commitment to excellence to
               our innovative solutions and dedicated community support."
           />
 

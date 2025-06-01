@@ -4,43 +4,44 @@ import React from "react";
 import bannerImg from "@/assets/banner.webp";
 import bannerImg1 from "@/assets/banner/banner1.webp";
 
+// f99436
+
 const HomeBanner = () => {
   return (
-    <div className="  flex items-center pt-4 px-6 md:px-8">
+    <div className="pt-6 px-4 sm:px-6 md:px-8">
       <Container>
-        {/* Responsive Flexbox Layout */}
-        <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
-          {/* Left Side - Text */}
-
-          <div className="w-full lg:w-1/2 h-full flex flex-col justify-center lg:text-left">
-            <div className="text-4xl md:text-5xl lg:text-5xl font-extrabold mb-8 leading-10 tracking-wide text-gradient   drop-shadow-lg">
-              <h1 className="pb-3">THE MOST COMPLETE </h1>
-              <h1 className="pb-3">IN INDONESIA </h1>
-              <h1 className="">SOLUTION PROVIDER</h1>
+        {/* Top Section */}
+        <div className="flex flex-col-reverse lg:flex-row items-center  gap-5 md:gap-10">
+          {/* Text Section */}
+          <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
+            <div className="text-xl  md:text-5xl lg:text-5xl font-extrabold leading-tight tracking-wide text-gray-900 dark:text-white drop-shadow-lg mb-6">
+              <h1 className="pb-2">
+                THE MOST COMPLETE IN INDONESIA SOLUTION PROVIDER
+              </h1>
             </div>
 
-            <div className="flex justify-start items-center mt-4">
-              <button className="bg-orange-500 text-white  text-xl font-semibold px-12 py-4 rounded-full shadow-lg hover:bg-orange-600 transition-all duration-300 ease-in-out transform hover:scale-105 ">
+            <div className="flex justify-center lg:justify-start  ">
+              <button className="bg-[#F99436] text-white text-lg sm:text-xl font-semibold px-8 sm:px-12 py-3 sm:py-4 rounded-full shadow-lg hover:bg-[#F99436] transition-all duration-300 ease-in-out transform hover:scale-105">
                 Free Food Test
               </button>
             </div>
           </div>
 
-          {/* Right Side - Image */}
+          {/* Image Section */}
           <div className="w-full lg:w-1/2 flex justify-center">
-            <div className="w-full relative h-[300px] md:h-[400px] lg:h-[350px]">
+            <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl">
               <Image
                 src={bannerImg}
                 alt="Doctor"
-                fill
-                className="object-contain rounded-lg"
+                className="w-full h-auto object-contain rounded-lg"
                 priority
               />
             </div>
           </div>
         </div>
 
-        <div className="w-full relative">
+        {/* Bottom Full-Width Banner */}
+        <div className="w-full mt-8">
           <Image
             src={bannerImg1}
             alt="Doctor"
