@@ -8,11 +8,11 @@ import { FoodMenu } from "./_components/FoodMenu";
 const page = () => {
   return (
     <div className=" ">
-      <HomeBanner />
+      {/* <HomeBanner /> */}
       <FoodMenu />
 
 
-      <Banner1 />
+      {/* <Banner1 /> */}
       <About />
       <SwiperFeedback />
     </div>

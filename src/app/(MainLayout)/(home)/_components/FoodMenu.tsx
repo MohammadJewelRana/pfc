@@ -6,7 +6,13 @@ import { Title } from "@/components/shared/Title";
 import React, { useState } from "react";
 import Image from "next/image";
 
-import rice1 from "@/assets/menu/rice/1.webp";
+import rice2 from "@/assets/menu/rice/2.jpg";
+import rice1 from "@/assets/menu/rice/3.jpg";
+import rice3 from "@/assets/menu/rice/4.jpg";
+import rice4 from "@/assets/menu/rice/5.jpg";
+
+
+import ModalPopup from "@/components/Modal/ModalPopup";
 
 const products = [
   {
@@ -18,7 +24,7 @@ const products = [
         minOrder: 30,
         pricePerBox: 120,
         packageItems: ["rice", "fish", "vegetables", "daal"],
-        image: [rice1, rice1],
+        image: [rice1,  ],
       },
       {
         id: 2,
@@ -26,7 +32,7 @@ const products = [
         minOrder: 25,
         pricePerBox: 110,
         packageItems: ["fried rice", "egg", "vegetables"],
-        image: [rice1, rice1],
+        image: [rice2, ],
       },
       {
         id: 3,
@@ -34,7 +40,7 @@ const products = [
         minOrder: 35,
         pricePerBox: 140,
         packageItems: ["fried rice", "chicken", "salad"],
-        image: [rice1, rice1],
+        image: [rice3],
       },
       {
         id: 33,
@@ -42,12 +48,12 @@ const products = [
         minOrder: 35,
         pricePerBox: 140,
         packageItems: ["fried rice", "chicken", "salad"],
-        image: [rice1, rice1],
+        image: [rice4,  ],
       },
     ],
   },
   {
-    category: "fish",
+    category: "snack box",
     items: [
       {
         id: 4,
@@ -68,7 +74,7 @@ const products = [
     ],
   },
   {
-    category: "kacchi",
+    category: "buffet",
     items: [
       {
         id: 6,
@@ -97,7 +103,7 @@ const products = [
     ],
   },
   {
-    category: "meat",
+    category: "coffee",
     items: [
       {
         id: 9,
@@ -195,7 +201,7 @@ export const FoodMenu = () => {
           {products.map((cat) => (
             <button
               key={cat.category}
-              className={`px-4 py-2 rounded-full border text-sm font-medium capitalize transition duration-300 ${
+              className={`px-4 py-2 rounded-lg border text-sm font-medium capitalize transition duration-300 ${
                 selectedCategory === cat.category
                   ? "bg-[#F99436] text-white"
                   : "bg-white text-gray-700 border-gray-300 hover:bg-[#f9943627]"
@@ -212,14 +218,14 @@ export const FoodMenu = () => {
           {currentItems.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col"
+              className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
             >
               <div className="relative w-full h-48">
                 <Image
                   src={item.image[0]}
                   alt={item.name}
                   fill
-                  className="object-cover"
+                  className=""
                   sizes="(max-width: 768px) 100vw,
                          (max-width: 1200px) 50vw,
                          33vw"
@@ -233,12 +239,14 @@ export const FoodMenu = () => {
                 </p>
                 <p className="text-sm text-gray-600 mb-4">
                   Per Box Price:{" "}
-                  <span className="font-medium">৳ {item.pricePerBox}</span>
+                  <span className="font-medium">TK {item.pricePerBox}</span>
                 </p>
               </div>
-              <button className="mt-auto bg-[#F99436] text-white px-4 py-2 rounded-b-2 hover:bg-[#f99436c9] transition duration-300">
-                View Details
-              </button>
+
+              <ModalPopup
+                data={item}
+                className1="mt-auto bg-[#F99436] text-white px-4 py-2 rounded-b-2 hover:bg-[#f99436c9] transition duration-300 w-full text-center cursor-pointer"
+              />
             </div>
           ))}
         </div>

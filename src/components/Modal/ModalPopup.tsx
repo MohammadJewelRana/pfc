@@ -1,136 +1,90 @@
-/* eslint-disable react/jsx-sort-props */
 "use client";
 
 import {
-  Button,
   Modal,
   ModalBody,
   ModalContent,
-  ModalFooter,
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/react";
+import Image from "next/image";
 import React from "react";
 import { FaRegCircle } from "react-icons/fa";
 
-export default function ModalPopup() {
+export default function ModalPopup({ data, className1 }: any) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [size, setSize] = React.useState("md");
+  const handleOpen = () => onOpen();
 
-  const handleOpen = (size: any) => {
-    setSize(size);
-    onOpen();
-  };
-
-  const termsData = [
-    {
-      id: 1,
-      text: "রেন্ট সময়কাল শুরু হবে যেদিন আইটেম টি সংগ্রহ সরবরাহ হবে এবং চুক্তিতে উল্লেখিত ফেরত দেয়ার তারিখে শেষ হবে।",
-    },
-    {
-      id: 2,
-      text: "রেন্ট ফি এবং ডেলিভারি চার্জ একসাথে সেলস রিপ্রেজেন্টেটিভ এর নিকট জমা দিতে হবে। ড্রেস দেরিতে ফেরত দিলে অতিরিক্ত চার্জ প্রযোজ্য হবে।",
-    },
-
-    {
-      id: 3,
-      text: "ড্রেস রেন্ট নেয়ার সময় যেমন ছিল তেমন অবস্থায় ফেরত দিতে হবে। কোন ধরনের ক্ষতি (দাগ,ছিড়া, ফাটা) বা পরিবর্তনের জন্য জরিমানা অথবা অতিরিক্ত চার্জ দিতে হবে।",
-    },
-    {
-      id: 4,
-      text: "চুক্তির তারিখের পরে ড্রেস রিটার্ন দিলে বিলম্বিত ফি প্রযোজ্য হবে। এই ফি ড্রেস রিটার্ন দেওয়া পর্যন্ত দৈনিক ভাবে চার্জ হবে।",
-    },
-    {
-      id: 5,
-      text: "বুকিং এর পর কোন ধরণের পরিবর্তন অথবা বাতিল গ্রহণযোগ্য হবে না।",
-    },
-    {
-      id: 6,
-      text: "গ্রাহক রেন্ট নেওয়া আইটেমের  চুরি বা ক্ষতির জন্য দায়ী থাকবে । রেন্ট নেওয়া আইটেম রেন্ট নেয়া আইটেমের দ্বারা সৃষ্ট কোন আঘাত বা ক্ষতির জন্য কর্তৃপক্ষ দায়ি থাকবে না।",
-    },
-    {
-      id: 7,
-      text: "গ্রাহক কর্তিক প্রদত্ত ব্যক্তিগত তথ্য শুধুমাত্র রেন্ট চুক্তি প্রক্রিয়া করার উদ্দেশ্যে ব্যবহৃত হবে এবং তৃতীয় পক্ষের নিকট তথ্য সরবরাহ করা হবে না।",
-    },
-    {
-      id: 8,
-      text: "The Thread story কর্তৃপক্ষ যেকোনো সময়ে এই শর্তাবলী সংশোধন করার অধিকার রাখে। গ্রাহকদের তাদের পরবর্তী রেন্ট এর যেকোনো পরিবর্তনের বিষয়ে অবহিত করা হবে।",
-    },
-  ];
+  const { name, image = [], packageItems = [], minOrder, pricePerBox } = data || {};
 
   return (
     <>
       <div className="flex flex-wrap gap-3">
-        <button
-          className="text-gray-300 underline"
-          key={size}
-          onClick={() => handleOpen(size)}
-        >
-          Terms & Condition
-        </button>
+        <p className={className1} onClick={handleOpen}>
+          View Details
+        </p>
       </div>
-      <Modal backdrop="blur" isOpen={isOpen} size="5xl" onClose={onClose}>
-        <ModalContent className="bg-white text-black">
+
+      <Modal backdrop="blur" isOpen={isOpen} size="2xl" onClose={onClose}>
+        <ModalContent className="bg-white text-black rounded-xl shadow-xl">
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1 ">
-                আসসালামু আলাইকুম,
+              {/* Header */}
+              <ModalHeader className="bg-[#F99436] text-white py-4 px-6 rounded-t-xl text-xl font-bold">
+                {name}
               </ModalHeader>
-              <ModalBody>
-                {/* <ul className="list-none">
-                  {termsData.map((term) => (
-                    <li
-                      key={term.id}
-                      className="flex items-start gap-4 mb-3 text-[12px] md:text-md"
-                    >
-                      <div className="flex-shrink-0">
-                        <FaRegCircle className="text-[#650934] bg-[#650934] rounded-full text-[12px] mt-[5px]" />
-                      </div>
-                      <div className="flex-grow">
-                        <span>{term.text}</span>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-                <p>ধন্যবাদ The Thread story কর্তৃপক্ষ।</p> */}
 
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptatem amet officiis corporis, nobis nemo quidem a
-                  voluptatum voluptas consequatur doloribus odio minus, eaque
-                  iste ad atque totam ullam, quo ipsa sint dignissimos sunt
-                  nulla quas! Reiciendis eos in ipsum, natus, ratione iusto
-                  quasi repellendus quia distinctio hic illum cumque sit
-                  veritatis libero nesciunt commodi sapiente quisquam incidunt,
-                  mollitia culpa sint. Odio, aut debitis! Necessitatibus nam
-                  explicabo doloremque est ipsum aut eligendi hic ea quam!
-                  Inventore asperiores qui, nisi rerum, deleniti porro dolorem
-                  atque et aliquam, quisquam amet laboriosam minus hic quam! Eum
-                  distinctio, mag es. Quas, ut? Debitis ipsam quidem sit dolor.
-                  Mollitia cum consectetur quis assumenda pariatur. Aperiam
-                  ipsam accusamus sit voluptates incidunt dolore aliquam sed,
-                  error laudantium a, quidem architecto, assumenda rerum. In
-                  nisi quaerat, optio pariatur cupiditate quis. Maxime culpa vel
-                  a saepe perferendis explicabo vitae harum, repellat delectus
-                  itaque? Modi fugit sit voluptatibus doloremque quam voluptates
-                  corrupti quos aperiam explicabo velit! Assumenda veritatis et
-                  debitis aliquid ratione odio hic praesentium recusandae
-                  facilis numquam vitae beatae itaque sapiente, dignissimos
-                  sequi? Minima, optio obcaecati. Asperiores at earum temporibus
-                  corporis, dolore tempora exercitationem similique fugiat nam,
-                  inventore vero! Doloremque, debitis officiis itaque ducimus
-                  est eius suscipit delectus voluptatibus commodi quasi eos?
-                </p>
+              {/* Body */}
+              <ModalBody className="p-6">
+                <div className="flex flex-col md:flex-row gap-8 items-start">
+                  {/* Left: Text */}
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold mb-4 text-gray-800">
+                      Package Includes:
+                    </h3>
+                    <ul className="space-y-3 mb-6">
+                      {packageItems.map((item: string, idx: number) => (
+                        <li
+                          key={idx}
+                          className="flex items-center gap-2 text-base text-gray-700"
+                        >
+                          <FaRegCircle className="text-yellow-600" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="space-y-2 text-gray-800">
+                      <p>
+                        <span className="font-semibold">Minimum Order:</span>{" "}
+                        {minOrder || ''} Boxes
+                      </p>
+                      <p>
+                        <span className="font-semibold">Price:</span>{" "}
+                        {pricePerBox || ''} Tk per box
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Right: Image */}
+                  <div className="relative w-[320px] h-[200px] rounded-lg overflow-hidden shadow-md">
+                    {image[0] && (
+                      <Image
+                        src={image[0]}
+                        alt={name}
+                        fill
+                        className="object-cover"
+                      />
+                    )}
+                  </div>
+                </div>
+
+                {/* Bottom Info Text */}
+                <div className=" text-center font-medium bg-[#F99436] text-white py-3 px-4 rounded-md text-base shadow-sm">
+                  For Confirm your Order Call us:{" "}
+                  <span className="font-bold">0123456789</span>
+                </div>
               </ModalBody>
-
-              <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
-                  Close
-                </Button>
-                {/* <Button color="primary" onPress={onClose}>
-                  Action
-                </Button> */}
-              </ModalFooter>
             </>
           )}
         </ModalContent>
