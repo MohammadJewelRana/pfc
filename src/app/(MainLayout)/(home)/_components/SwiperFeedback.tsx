@@ -42,7 +42,7 @@ export default function SwiperFeedback() {
   ];
 
   return (
-    <div className="mt-24 py-4  bg-[#ecf1f8]  ">
+    <div className=" py-4  bg-[#ecf1f8]  ">
       <Container>
         <Swiper
           breakpoints={{
