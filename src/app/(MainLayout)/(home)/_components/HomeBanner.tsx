@@ -2,10 +2,11 @@ import Container from "@/components/shared/Container";
 import Image from "next/image";
 import React from "react";
 import bannerImg from "@/assets/banner.webp";
+import bannerImg1 from "@/assets/banner/banner1.webp";
 
 const HomeBanner = () => {
   return (
-    <div className="py-12  flex items-center pt-4 px-6 md:px-8">
+    <div className="  flex items-center pt-4 px-6 md:px-8">
       <Container>
         {/* Responsive Flexbox Layout */}
         <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
@@ -37,6 +38,15 @@ const HomeBanner = () => {
               />
             </div>
           </div>
+        </div>
+
+        <div className="w-full relative">
+          <Image
+            src={bannerImg1}
+            alt="Doctor"
+            className="w-full h-auto object-contain rounded-lg"
+            priority
+          />
         </div>
       </Container>
     </div>
