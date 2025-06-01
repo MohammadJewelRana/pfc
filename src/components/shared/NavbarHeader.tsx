@@ -25,10 +25,10 @@ const NavbarHeader = () => {
           {/* Phone and Catalog */}
           <div className="flex items-center space-x-4">
             {/* Phone */}
-            <Link href="tel:+8801896062848" passHref title="Call Us">
+            <Link href="tel:+8801xxxxxxxxx" passHref title="Call Us">
               <p className="flex items-center font-medium text-gray-700 text-[14px] md:text-md lg:text-lg hover:text-orange-700">
                 <FaPhoneAlt className="mr-2 text-white text-lg p-1 rounded-full bg-orange-600" />
-                +880 1896-062848
+                +880 1xxx-xxxxxx
               </p>
             </Link>
 
