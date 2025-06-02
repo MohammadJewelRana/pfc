@@ -9,13 +9,23 @@ import {
 } from "@nextui-org/react";
 import Image from "next/image";
 import React from "react";
-import { FaRegCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 
 export default function ModalPopup({ data, className1 }: any) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const handleOpen = () => onOpen();
 
-  const { name, image = [], packageItems = [], minOrder, pricePerBox } = data || {};
+  const {
+    name,
+    image = [],
+    packageItems = [],
+    minOrder,
+    pricePerBox,
+  } = data || {};
+
+  const midIndex = Math.ceil(packageItems.length / 2);
+  const leftItems = packageItems.slice(0, midIndex);
+  const rightItems = packageItems.slice(midIndex);
 
   return (
     <>
@@ -42,26 +52,49 @@ export default function ModalPopup({ data, className1 }: any) {
                     <h3 className="text-lg font-semibold mb-4 text-gray-800">
                       Package Includes:
                     </h3>
+
+                    {/* if more than 4 then show  horizontally  */}
+                    {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6">
+  <ul className="space-y-3 mb-2">
+    {leftItems.map((item: string, idx: number) => (
+      <li key={idx} className="flex items-center gap-2 text-base text-gray-700">
+        <FaCheckCircle className="text-[#F99436]" />
+        {item}
+      </li>
+    ))}
+  </ul>
+  <ul className="space-y-3 mb-2">
+    {rightItems.map((item: string, idx: number) => (
+      <li key={idx} className="flex items-center gap-2 text-base text-gray-700">
+        <FaCheckCircle className="text-[#F99436]" />
+        {item}
+      </li>
+    ))}
+  </ul>
+</div> */}
+
                     <ul className="space-y-3 mb-6">
                       {packageItems.map((item: string, idx: number) => (
                         <li
                           key={idx}
                           className="flex items-center gap-2 text-base text-gray-700"
                         >
-                          <FaRegCircle className="text-yellow-600" />
+                          <FaCheckCircle className="text-[#F99436]" />
+
                           {item}
                         </li>
                       ))}
                     </ul>
 
+                    <hr className="pb-2" />
                     <div className="space-y-2 text-gray-800">
                       <p>
                         <span className="font-semibold">Minimum Order:</span>{" "}
-                        {minOrder || ''} Boxes
+                        {minOrder || ""} Boxes
                       </p>
                       <p>
                         <span className="font-semibold">Price:</span>{" "}
-                        {pricePerBox || ''} Tk per box
+                        {pricePerBox || ""} Tk per box
                       </p>
                     </div>
                   </div>

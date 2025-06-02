@@ -23,7 +23,8 @@ const NavbarHeader = () => {
             <Link href="tel:+8801xxxxxxxxx" passHref title="Call Us">
               <p className="flex items-center font-medium text-gray-700 text-[14px] md:text-md lg:text-lg hover:text-[#F99436]">
                 <FaPhoneAlt className="mr-2 text-white text-lg p-1 rounded-full bg-[#F99436]" />
-                +880 1xxx-xxxxxx
+                +880 1680-000200
+                 
               </p>
             </Link>
 

@@ -4,8 +4,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import React from "react";
 
-import img2 from "@/assets/banner.webp";
+import img2 from "@/assets/banner/banner2.webp";
+// import img2 from "@/assets/banner.webp";
+
+
 import { Title } from "@/components/shared/Title";
+
 
 const About = () => {
   return (
@@ -45,16 +49,16 @@ const About = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <p className="text-justify text-lg">
+              <p className="text-justify text-md">
                 PFC is the most complete one-stop all-in-one F&B solution
                 provider in Bangladesh. We focus on corporate services for
                 companies, offices, and governments. With 6+ kitchens and more
                 than 15 menu choices, we serve thousands of orders every day in
-                Dhaka city. <br /> We provide the most complete products and
+                Dhaka city. <br /> <br /> We provide the most complete products and
                 services in Bangladesh, starting from rice boxes, snack boxes,
                 tumpeng, liwet, pantry supplies, frozen food, healthy food,
                 buffets, coffee breaks, food stalls, canteens, canapes, BBQ,
-                vegan & vegetarian, in-home fine dining, and many more. <br />{" "}
+                vegan & vegetarian, in-home fine dining, and many more. <br />{" "} <br />
                 Also enjoy souvenirs and snacks typical of the archipelago in
                 158 cities in Bangladesh, delivered directly to your home. Or do
                 you want to have a culinary business? Let's buy a franchise at

@@ -11,7 +11,6 @@ import rice1 from "@/assets/menu/rice/3.jpg";
 import rice3 from "@/assets/menu/rice/4.jpg";
 import rice4 from "@/assets/menu/rice/5.jpg";
 
-
 import ModalPopup from "@/components/Modal/ModalPopup";
 
 const products = [
@@ -20,19 +19,20 @@ const products = [
     items: [
       {
         id: 1,
-        name: "Classic Rice Bowl",
+      
+           name: "Egg Fried Rice",
         minOrder: 30,
         pricePerBox: 120,
-        packageItems: ["rice", "fish", "vegetables", "daal"],
-        image: [rice1,  ],
+        packageItems: ["rice ", "fish", "vegetables", "daal","rice", "fish",  ],
+        image: [rice1],
       },
       {
         id: 2,
-        name: "Egg Fried Rice",
+         name: "Classic Rice Bowl",
         minOrder: 25,
         pricePerBox: 110,
         packageItems: ["fried rice", "egg", "vegetables"],
-        image: [rice2, ],
+        image: [rice2],
       },
       {
         id: 3,
@@ -48,7 +48,7 @@ const products = [
         minOrder: 35,
         pricePerBox: 140,
         packageItems: ["fried rice", "chicken", "salad"],
-        image: [rice4,  ],
+        image: [rice4],
       },
     ],
   },
@@ -214,7 +214,7 @@ export const FoodMenu = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1   md:grid-cols-2 lg:grid-cols-4 gap-6">
           {currentItems.map((item) => (
             <div
               key={item.id}

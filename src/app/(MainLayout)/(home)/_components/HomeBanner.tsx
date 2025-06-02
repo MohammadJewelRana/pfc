@@ -1,8 +1,12 @@
 import Container from "@/components/shared/Container";
 import Image from "next/image";
 import React from "react";
-import bannerImg from "@/assets/banner.webp";
+// import bannerImg from "@/assets/banner.webp";
+import bannerImg from "@/assets/banner/banner2.webp";
 import bannerImg1 from "@/assets/banner/banner1.webp";
+
+// import bannerImg1 from "@/assets/banner/banner1.webp";
+
 
 // f99436
 
@@ -14,9 +18,9 @@ const HomeBanner = () => {
         <div className="flex flex-col-reverse lg:flex-row items-center  gap-5 md:gap-10">
           {/* Text Section */}
           <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
-            <div className="text-xl  md:text-5xl lg:text-5xl font-extrabold leading-tight tracking-wide text-gray-900 dark:text-white drop-shadow-lg mb-6">
-              <h1 className="pb-2">
-                THE MOST COMPLETE IN INDONESIA SOLUTION PROVIDER
+            <div className="text-xl max-w-[500px]  md:text-5xl lg:text-4xl font-extrabold leading-tight tracking-wide text-gray-900 dark:text-white drop-shadow-lg mb-6">
+              <h1 className="pb-2 uppercase">
+                THE MOST COMPLETE  food and beverage SOLUTION PROVIDER
               </h1>
             </div>
 
@@ -33,7 +37,7 @@ const HomeBanner = () => {
               <Image
                 src={bannerImg}
                 alt="Doctor"
-                className="w-full h-auto object-contain rounded-lg"
+                className="w-full h-auto object-cover rounded-lg"
                 priority
               />
             </div>
@@ -41,14 +45,14 @@ const HomeBanner = () => {
         </div>
 
         {/* Bottom Full-Width Banner */}
-        <div className="w-full mt-8">
+        {/* <div className="w-full mt-8">
           <Image
             src={bannerImg1}
             alt="Doctor"
             className="w-full h-auto object-contain rounded-lg"
             priority
           />
-        </div>
+        </div> */}
       </Container>
     </div>
   );
