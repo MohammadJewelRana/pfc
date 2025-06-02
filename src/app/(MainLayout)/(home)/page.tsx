@@ -14,7 +14,7 @@ const page = () => {
       <Banner1 />
       <About />
       <SwiperFeedback />
-      <Company/>
+      {/* <Company/> */}
     </div>
   );
 };

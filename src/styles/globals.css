@@ -7,7 +7,7 @@ body {
 }
 /* Default pagination dots */
 .swiper-pagination-bullet {
-  background-color:  rgba(0, 128, 0, 0.678) !important; /* Inactive state */
+  background-color:  rgba(141, 121, 8, 0.678) !important; /* Inactive state */
   width: 8px;
   height: 8px;
   opacity: 1;
@@ -17,7 +17,7 @@ body {
 
 /* Active pagination dot */
 .swiper-pagination-bullet-active {
-  background-color: red !important; /* Fully highlighted active dot */
+  background-color: rgb(245, 175, 47) !important; /* Fully highlighted active dot */
   width: 8px; /* Slightly bigger */
   height: 8px;
   

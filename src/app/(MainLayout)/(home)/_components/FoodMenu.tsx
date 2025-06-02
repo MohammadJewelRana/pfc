@@ -15,20 +15,20 @@ import ModalPopup from "@/components/Modal/ModalPopup";
 
 const products = [
   {
-    category: "rice",
+    category: "Rice Box",
     items: [
       {
         id: 1,
-      
-           name: "Egg Fried Rice",
+
+        name: "Egg Fried Rice",
         minOrder: 30,
         pricePerBox: 120,
-        packageItems: ["rice ", "fish", "vegetables", "daal","rice", "fish",  ],
+        packageItems: ["rice ", "fish", "vegetables", "daal", "rice", "fish"],
         image: [rice1],
       },
       {
         id: 2,
-         name: "Classic Rice Bowl",
+        name: "Classic Rice Bowl",
         minOrder: 25,
         pricePerBox: 110,
         packageItems: ["fried rice", "egg", "vegetables"],
@@ -53,7 +53,7 @@ const products = [
     ],
   },
   {
-    category: "snack box",
+    category: "Buffet",
     items: [
       {
         id: 4,
@@ -74,7 +74,7 @@ const products = [
     ],
   },
   {
-    category: "buffet",
+    category: "In-home Fine Dining",
     items: [
       {
         id: 6,
@@ -103,7 +103,7 @@ const products = [
     ],
   },
   {
-    category: "coffee",
+    category: "BBQ",
     items: [
       {
         id: 9,
@@ -132,7 +132,7 @@ const products = [
     ],
   },
   {
-    category: "vegetable",
+    category: "Food Stall",
     items: [
       {
         id: 12,
@@ -153,7 +153,7 @@ const products = [
     ],
   },
   {
-    category: "combo",
+    category: "Healthy, Vegan, Vegetarian Catering",
     items: [
       {
         id: 14,
@@ -184,17 +184,14 @@ const products = [
 ];
 
 export const FoodMenu = () => {
-  const [selectedCategory, setSelectedCategory] = useState("rice");
+  const [selectedCategory, setSelectedCategory] = useState("Rice Box");
   const currentItems =
     products.find((cat) => cat.category === selectedCategory)?.items || [];
 
   return (
-    <div className="py-10">
+    <div className="pt-6 md:pt-16  pb-10">
       <Container>
-        <Title
-          heading="ONE-STOP Solution"
-          subHeading="ONE-STOP Solution for all company needs"
-        />
+        <Title heading="ONE-STOP Solution" subHeading=" " />
 
         {/* Category Buttons */}
         <div className="flex flex-wrap justify-center gap-3 my-6">

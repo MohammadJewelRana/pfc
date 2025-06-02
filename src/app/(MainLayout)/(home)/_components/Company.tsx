@@ -24,7 +24,7 @@ export const Company = () => {
       <Container>
         <Title
           heading="Companies We've Proudly Served"
-          subHeading="  delivering hygienic and delicious food solutions"
+          subHeading="   "
         />
 
         <div className="grid grid-cols-2   md:grid-cols-4 lg:grid-cols-5 gap-6 mt-10 justify-items-center items-center border">

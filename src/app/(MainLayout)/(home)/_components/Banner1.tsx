@@ -3,7 +3,11 @@ import React from "react";
 import Image from "next/image";
 
 // import img from "@/assets/why/mobile.png";
+
+
 import img from "@/assets/why/desktop.png";
+
+
 // import img from "@/assets/why/1.webp";
 
 import { Title } from "@/components/shared/Title";
@@ -15,9 +19,8 @@ export const Banner1 = () => {
         {/* Title */}
 
         <Title
-          heading="   Why PFC?"
-          subHeading="   our commitment to excellence to
-                      our innovative solutions and dedicated community support."
+          heading="   Why Pocket Friendly Catering (PFC)?"
+          subHeading="   "
         />
 
         {/* Responsive Image */}

@@ -151,8 +151,8 @@ const Footer = () => {
 
           {/* Middle Section: Address */}
           <div className="text-sm text-gray-300 flex items-center gap-2 flex-shrink-0">
-            <MdLocationOn className="text-white text-lg" />]
-            <span>House-23, Road-3 , Dhanmondi, Dhaka</span>
+            <MdLocationOn className="text-white text-lg" />
+            <span>House-23, Road-3 , Dhanmondi, Dhaka - 1209.</span>
           </div>
 
           {/* Right Section: Phone */}
