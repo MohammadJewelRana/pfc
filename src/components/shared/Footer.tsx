@@ -151,13 +151,13 @@ const Footer = () => {
           {/* Middle Section: Address */}
           <div className="text-sm text-gray-300 flex items-center gap-2 flex-shrink-0">
             <MdLocationOn className="text-white text-lg" />
-            <span>123 Main Street, Mirpur, Dhaka</span>
+            <span>House-23, Road-3 , Dhanmondi, Dhaka</span>
           </div>
 
           {/* Right Section: Phone */}
           <div className="text-sm text-gray-300 flex items-center gap-2 flex-shrink-0">
             <FaPhoneAlt className="text-white" />
-            <span>+880 1896-062848</span>
+            <span>+880 1680-000200</span>
           </div>
         </div>
       </Container>
