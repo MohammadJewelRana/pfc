@@ -122,7 +122,8 @@
 
 import { FaRegCopyright, FaPhoneAlt } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
-import logo from "@/assets/logo/PFC1.jpg";
+import logo from "@/assets/logo/whiteLogo.png";
+// import logo from "@/assets/logo/PFC1.jpg";
 import React from "react";
 import Image from "next/image";
 import Container from "./Container";
@@ -150,7 +151,7 @@ const Footer = () => {
 
           {/* Middle Section: Address */}
           <div className="text-sm text-gray-300 flex items-center gap-2 flex-shrink-0">
-            <MdLocationOn className="text-white text-lg" />
+            <MdLocationOn className="text-white text-lg" />]
             <span>House-23, Road-3 , Dhanmondi, Dhaka</span>
           </div>
 

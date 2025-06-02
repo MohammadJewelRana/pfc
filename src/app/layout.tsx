@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   },
   description: "",
   icons: {
-    // icon: "/tts3.png",
-    // icon: "/logo.png",
+    icon: "/favicon.png",
+     
   },
 };
 
