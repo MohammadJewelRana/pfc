@@ -20,29 +20,25 @@ export default function SwiperFeedback() {
     {
       id: 2,
       name: "Al-Amin Bamna",
-      feedback:
-        "Their electric trucks are highly profitable, affordable, and environmentally friendly for our business!",
+      feedback: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius blanditiis ",
       image: fd1,
     },
     {
       id: 3,
       name: "Md Jewel Rana",
-      feedback:
-        "Their cargo trucks are very reliable and have made our work much easier.",
+          feedback: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius blanditiis ",
       image: fd1,
     },
     {
       id: 4,
       name: "Fahim Islam",
-      feedback:
-        "You can customize their electric trucks according to your needs.",
+        feedback: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius blanditiis ",
       image: fd1,
     },
     {
       id: 5,
       name: "Fahim Islam",
-      feedback:
-        "You can customize their electric trucks according to your needs.",
+          feedback: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius blanditiis ",
       image: fd1,
     },
   ];
@@ -50,29 +46,25 @@ export default function SwiperFeedback() {
   return (
     <div className="pt-8">
       <Container>
-        <Title
-          heading="Feedback That Matters"
-          subHeading=" "
-        />
+        <Title heading="Feedback That Matters" subHeading=" " />
 
-    <Swiper
-  loop={true} // ✅ Infinite loop enabled
-  breakpoints={{
-    640: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
-  }}
-  className="mySwiper"
-  freeMode={true}
-  modules={[FreeMode, Pagination, Autoplay]}
-  pagination={{ clickable: true }}
-  slidesPerView={1}
-  spaceBetween={30}
-  autoplay={{
-    delay: 3000,
-    reverseDirection: false, 
-  }}
->
-
+        <Swiper
+          loop={true} // ✅ Infinite loop enabled
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="mySwiper"
+          freeMode={true}
+          modules={[FreeMode, Pagination, Autoplay]}
+          pagination={{ clickable: true }}
+          slidesPerView={1}
+          spaceBetween={30}
+          autoplay={{
+            delay: 3000,
+            reverseDirection: false,
+          }}
+        >
           {feedbackData.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="flex flex-col items-center justify-center p-4 w-full pb-12">

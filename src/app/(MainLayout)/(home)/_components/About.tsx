@@ -4,7 +4,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import React from "react";
 
-import img2 from "@/assets/banner/banner2.webp";
+import img2 from "@/assets/about/1.png";
+// import img2 from "@/assets/banner/banner2.webp";
 // import img2 from "@/assets/banner.webp";
 
 import { Title } from "@/components/shared/Title";
@@ -46,7 +47,7 @@ const About = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <p className="text-justify text-md">
+              <p className="text-justify text-lg">
                 PFC is the most complete one-stop all-in-one F&B solution
                 provider in Bangladesh. <br /> <br /> We focus on corporate services for
                 companies, offices, and governments. With 6+ kitchens around
