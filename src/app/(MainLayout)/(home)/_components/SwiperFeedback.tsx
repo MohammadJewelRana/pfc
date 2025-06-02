@@ -43,7 +43,7 @@ export default function SwiperFeedback() {
   ];
 
   return (
-    <div className="pt-8   bg-[#ecf1f8cc]  ">
+    <div className="pt-8      ">
       <Container>
         <Title
           heading=" Feedback That Matters"
